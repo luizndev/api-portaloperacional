@@ -155,6 +155,11 @@ app.post("/api/auth/register", async (req, res) => {
   }
 });
 
+// Open Route
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Bem vindo a api" });
+});
+
 // Login
 app.post("/api/auth/login", async (req, res) => {
   const { email, password } = req.body;
